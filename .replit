@@ -1,18 +1,12 @@
-run = "npm run dev"
-entrypoint = "next.config.js"
+run = "npm install && npm run dev"
+entrypoint = "app/page.tsx"
 
-modules = ["nodejs-20"]
-
-[unitTest]
-language = "nodejs"
-
-[packager]
-language = "nodejs"
-ignoredPaths = ["node_modules", ".next", ".vercel"]
-
-[packager.features]
-packageSearch = true
-guessImports = true
+[env]
+NODE_ENV = "development"
 
 [nix]
-channel = "stable-23_11"
+channel = "unstable"
+
+[[ports]]
+localPort = 3000
+externalPort = 3000
