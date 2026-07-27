@@ -1,0 +1,18 @@
+run = "npm run dev"
+entrypoint = "next.config.js"
+
+modules = ["nodejs-20"]
+
+[unitTest]
+language = "nodejs"
+
+[packager]
+language = "nodejs"
+ignoredPaths = ["node_modules", ".next", ".vercel"]
+
+[packager.features]
+packageSearch = true
+guessImports = true
+
+[nix]
+channel = "stable-23_11"
