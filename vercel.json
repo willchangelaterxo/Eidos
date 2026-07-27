@@ -1,0 +1,17 @@
+{
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "nodeVersion": "18.x",
+  "env": {
+    "NEXT_PUBLIC_TMDB_API_KEY": {
+      "description": "TMDB API Key - Get from https://www.themoviedb.org/settings/api"
+    }
+  },
+  "functions": {
+    "api/**": {
+      "maxDuration": 60
+    }
+  }
+}
